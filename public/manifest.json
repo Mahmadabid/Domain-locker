@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Domain Locker",
+    "version": "0.1.0",
+    "description": "Chrome extension to lock your domains",
+    "icons": {
+      "16": "/favicon.ico",
+      "32": "/favicon.ico",
+      "48": "/icon.png",
+      "128": "/icon.png",
+      "192": "/icon.png"
+    },
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["https://*/*", "http://*/*"],
+        "js": ["inject.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "index.html"
+    }
+  }
