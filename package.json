@@ -1,5 +1,6 @@
 {
   "name": "domain-locker",
+  "description": "chrome extension to lock your domains",
   "version": "0.1.0",
   "private": true,
   "scripts": {
