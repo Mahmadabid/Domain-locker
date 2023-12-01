@@ -4,16 +4,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "dev:extension": "npm-watch",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "build:extension": "next build && next export && npm run lint:build",
-    "lint:build": "mv out/_next out/assets && sed -i 's/\\/_next/\\/assets/g' out/**.html",
-    "package": "npm run build:extension && zip -r packages/$(date -u +\"%Y-%m-%dT%H:%M:%SZ\").zip out"
+    "build": "npm run prep && node out.js",
+    "prep": "npm run exp && node out.js",
+    "exp": "next build && next export && node out.js",
+    "run": "next start",
+    "dev": "next dev"
   },
   "dependencies": {
+    "glob": "^10.3.10",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
