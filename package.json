@@ -4,9 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "npm run prep && node out.js",
-    "prep": "npm run exp && node out.js",
-    "exp": "next build && next export && node out.js",
+    "build": "next build",
     "run": "next start",
     "dev": "next dev"
   },
@@ -14,8 +12,7 @@
     "glob": "^10.3.10",
     "next": "14.0.3",
     "react": "^18",
-    "react-dom": "^18",
-    "sed": "^0.0.2"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
