@@ -26,7 +26,12 @@ The Domain Locker Chrome extension is a tool designed to help you lock your doma
     npm run build
     ```
 
-5. **Load the Extension in Chrome:**
+5. **Run out.js**
+    ```bash
+    node out.js
+    ```
+
+6. **Load the Extension in Chrome:**
    - Open Chrome and go to `chrome://extensions/`.
    - Enable "Developer mode" in the top right corner.
    - Click "Load unpacked" and select the `out` directory in your extension project.
